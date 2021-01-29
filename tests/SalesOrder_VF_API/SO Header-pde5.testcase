@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase>
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Pde5 (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">Pde5</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Pde5</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="3" title="Create Object: sohdr__c=&gt;sohdrId">
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">sohdr__c</value>
+        </argument>
+        <argument id="resultIdName">
+          <value class="value" valueClass="string">sohdrId</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">Pde5</value>
+        </argument>
+        <argument id="sohdr_custno__c">
+          <value class="value" valueClass="string">a4Nd0000000bIjCEAU</value>
+        </argument>
+        <argument id="sohdr_order__c">
+          <value class="compound">
+            <parts>
+              <value valueClass="string">SO-</value>
+              <funcCall id="UniqueId">
+                <argument id="length">
+                  <value class="value" valueClass="decimal">4</value>
+                </argument>
+              </funcCall>
+            </parts>
+          </value>
+        </argument>
+        <argument id="sohdr_orderdate__c">
+          <value class="funcCall" id="DateAdd">
+            <argument id="date">
+              <value class="variable">
+                <path element="TODAY"/>
+              </value>
+            </argument>
+          </value>
+        </argument>
+        <argument id="assignmentRuleId"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">Pde5</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">sohdr__c</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=sohdr__c&amp;field=sohdr_custno__c" name="sohdr_custno__c" title="sohdr_custno__c">
+          <summary>This is the Customer associated with this Sales Order.</summary>
+        </apiParam>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=sohdr__c&amp;field=sohdr_order__c" name="sohdr_order__c" title="sohdr_order__c">
+          <summary>The SO identifier defaulted to the next SO # based on SO Control record. However, the SO # can be manually assigned by unchecking auto-assign. For automatic SO #s, system retrieves last SO # assigned from Order Number Assign record, &amp; increments it by 1.</summary>
+        </apiParam>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=sohdr__c&amp;field=sohdr_orderdate__c" name="sohdr_orderdate__c" title="sohdr_orderdate__c">
+          <summary>This is  the Date that the Sales Order is entered.  It defaults to the system date when the order is entered and can be changed by the user.</summary>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>

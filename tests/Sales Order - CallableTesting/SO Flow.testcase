@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="1">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Devqaff (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">Devqaff</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Devqaff</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">Force_com</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <caseCall testCaseId="0984cba3-426d-4801-9d11-9d0c5411befe" testCasePath="tests/Sales Order - CallableTesting/SO Header.testcase" testItemId="2">
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="Onum">
+          <name class="value" valueClass="string">Onum</name>
+        </outputArgument>
+        <outputArgument id="Ordnum">
+          <name class="value" valueClass="string">Ordnum</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+    <caseCall testCaseId="645e718d-d1ff-40cf-a157-4cedf2c6c0c7" testCasePath="tests/Sales Order - CallableTesting/SO Line.testcase" testItemId="3">
+      <arguments>
+        <argument id="ONumber">
+          <value class="variable">
+            <path element="Onum"/>
+          </value>
+        </argument>
+        <argument id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="Row">
+          <name class="value" valueClass="string">Row</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+  </steps>
+  <params>
+    <param name="Begin" title="Begin">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+  </params>
+  <outputParams>
+    <param name="End" title="End">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="value" valueClass="string">End</sourceValue>
+    </param>
+  </outputParams>
+  <args>
+    <argument id="Begin">
+      <value class="value" valueClass="string">Begin</value>
+    </argument>
+  </args>
+  <outputArgs>
+    <outputArgument id="End">
+      <name class="value" valueClass="string">End</name>
+    </outputArgument>
+  </outputArgs>
+</testCase>
