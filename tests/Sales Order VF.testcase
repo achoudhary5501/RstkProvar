@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="8">
+<testCase id="0">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Devqaff (Test)">
@@ -422,10 +422,10 @@
                   <value class="value" valueClass="string">false</value>
                 </argument>
                 <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
+                  <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
                 </argument>
                 <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
+                  <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
                 </argument>
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Click the Customer_ Select field</value>

@@ -163,7 +163,7 @@
                           <value class="uiWait" uri="default"/>
                         </argument>
                         <argument id="afterWait">
-                          <value class="uiWait" uri="default"/>
+                          <value class="uiWait" uri="ui:wait:timed?seconds=10"/>
                         </argument>
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Set the Product field to 5501-16 (Mfd)</value>
@@ -171,19 +171,23 @@
                         <argument id="autoRetry"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <textType/>
+                            <textType>
+                              <constraints>
+                                <valueConstraint name="mimeType">text/plain</valueConstraint>
+                              </constraints>
+                            </textType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -292,7 +296,7 @@
                           <value class="uiWait" uri="default"/>
                         </argument>
                         <argument id="afterWait">
-                          <value class="uiWait" uri="default"/>
+                          <value class="uiWait" uri="ui:wait:timed?seconds=10"/>
                         </argument>
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Set the Qty Ordered field to 2</value>
@@ -417,7 +421,7 @@
                   <value class="uiWait" uri="default"/>
                 </argument>
                 <argument id="afterWait">
-                  <value class="uiWait" uri="default"/>
+                  <value class="uiWait" uri="ui:wait:timed?seconds=30"/>
                 </argument>
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Click the Save button</value>
