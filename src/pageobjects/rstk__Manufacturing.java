@@ -19,5 +19,11 @@ public class rstk__Manufacturing {
 	@LinkType()
 	@FindBy(linkText = "Sales Order Entry")
 	public WebElement salesOrderEntry1;
+	@LinkType()
+	@FindBy(linkText = "Site Master")
+	public WebElement siteMaster;
+	@LinkType()
+	@FindBy(linkText = "Vendor Master")
+	public WebElement vendorMaster;
 	
 }

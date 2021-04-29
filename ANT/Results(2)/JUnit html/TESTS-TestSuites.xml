@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite failures="0" hostname="LAPTOP-BJ5N0QR9" id="0" name="Test_RSTK_1/tests" package="" skipped="0" tests="1" time="326.277" timestamp="Mon Feb 01 01:33:56 IST 2021">
+	    <properties>
+		      <property name="excludeCallableTestCases" value="true" />
+
+		      <property name="testEnvironment" value="" />
+
+		      <property name="pluginOutputLevel" value="WARNING" />
+
+		      <property name="projectPath" value=".." />
+
+		      <property name="salesforceMetadataCache" value="Reuse" />
+
+		      <property name="resultsPathDisposition" value="Increment" />
+
+		      <property name="testOutputLevel" value="INFO" />
+
+		      <property name="webBrowserType" value="Chrome" />
+
+		      <property name="resultsPath" value="../ANT/Results" />
+
+		      <property name="webBrowserConfiguration" value="1024x768" />
+
+		      <property name="projectCachePath" value="F:\Automation\ProvarRepository_Test_RSTK1\Test_RSTK_1\ANT\..\..\.provarCaches" />
+
+	    </properties>
+
+	    <testcase classname="tests/Sales Order VF.testcase" name="Sales Order VF.testcase" time="319.129">
+	</testcase>
+
+  </testsuite>
+</testsuites>

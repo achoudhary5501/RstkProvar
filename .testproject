@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserProviderDeviceName="1024x768" selectedBrowserProviderName="Desktop">
+<testProject selectedBrowserProviderDeviceName="1024x768" selectedBrowserProviderName="Desktop" selectedEnvironment="Devqaff">
   <title>/Test_RSTK_1/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -8,6 +8,48 @@
   <sourcePath>src</sourcePath>
   <secureStoragePath>.secrets</secureStoragePath>
   <browserDebugPort>0</browserDebugPort>
+  <environments>
+    <environment name="Pde5">
+      <summary>Pde5</summary>
+    </environment>
+    <environment name="Devqaff">
+      <summary>Devqaff</summary>
+    </environment>
+  </environments>
+  <variables>
+    <testVariable name="ENV_VAR">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="minLength">0</valueConstraint>
+          <valueConstraint name="maxLength">9999</valueConstraint>
+          <valueConstraint name="regex"/>
+        </constraints>
+      </valueType>
+      <summary/>
+      <values>
+        <testVariableValue/>
+        <testVariableValue envName="Pde5">
+          <valueType class="textType">
+            <constraints>
+              <valueConstraint name="minLength">0</valueConstraint>
+              <valueConstraint name="maxLength">9999</valueConstraint>
+              <valueConstraint name="regex"/>
+            </constraints>
+          </valueType>
+          <value class="value" valueClass="string">pd5</value>
+        </testVariableValue>
+        <testVariableValue envName="devqa">
+          <valueType class="textType">
+            <constraints>
+              <valueConstraint name="minLength">0</valueConstraint>
+              <valueConstraint name="maxLength">9999</valueConstraint>
+              <valueConstraint name="regex"/>
+            </constraints>
+          </valueType>
+        </testVariableValue>
+      </values>
+    </testVariable>
+  </variables>
   <connectionClasses>
     <connectionClass name="sf">
       <connections>

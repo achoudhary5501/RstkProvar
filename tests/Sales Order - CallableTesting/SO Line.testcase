@@ -57,7 +57,7 @@
               </namedValue>
               <namedValue name="value">
                 <value class="variable">
-                  <path element="ONumber"/>
+                  <path element="Onum"/>
                 </value>
               </namedValue>
               <namedValue name="valueScope">
@@ -465,7 +465,7 @@
     </apiCall>
   </steps>
   <params>
-    <param name="ONumber" title="Onumber">
+    <param name="ONumber" title="ONumber">
       <summary/>
       <type>
         <textType>
@@ -507,14 +507,14 @@
     </param>
   </outputParams>
   <args>
-    <argument id="ONumber">
-      <value class="variable">
-        <path element="Onum"/>
-      </value>
-    </argument>
     <argument id="reuseConnectionName">
       <value class="variable">
         <path element="reuseConnectionName"/>
+      </value>
+    </argument>
+    <argument id="ONumber">
+      <value class="variable">
+        <path element="Onum"/>
       </value>
     </argument>
   </args>

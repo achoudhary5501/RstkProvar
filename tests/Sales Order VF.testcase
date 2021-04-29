@@ -26,11 +26,15 @@
         <argument id="alreadyOpenBehaviour">
           <value class="value" valueClass="string">Fail</value>
         </argument>
-        <argument id="privateBrowsingMode"/>
+        <argument id="privateBrowsingMode">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
@@ -49,7 +53,7 @@
           <value class="value" valueClass="string">Devqaff</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?tab=rstk__Rootstock_Site_Map&amp;application=rstk__Force_com&amp;pageObject=pageobjects.rstk__Manufacturing"/>
+          <value class="uiTarget" uri="sf:ui:target?application=Force_com&amp;pageObject=pageobjects.rstk__Manufacturing&amp;tab=Rootstock_Site_Map"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Always</value>
@@ -58,7 +62,7 @@
           <value class="value" valueClass="string">On SF Rootstock Site Map tab</value>
         </argument>
         <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
+          <value class="value" valueClass="string">Opened</value>
         </argument>
         <argument id="windowSize">
           <value class="value" valueClass="string">Default</value>

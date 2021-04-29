@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div style='float: right;'><img src='../../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> Search a record.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:28:51 (00:00.000)</span></div>Start of Test Case Search a record.testcase</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:28:51 (00:00.008)</span></div>Start of Test Step Salesforce Connect: Devqaff (Test)</div><div class='TestOutput inf'>Opening Salesforce connection  Connection name: Devqaff</div><div class='TestOutput inf'>Connection details.  Connection name: Devqaff, urlString: sf:user=achoudhary@rootstock.com.dev-qa-ff;password={password};securityToken={securityToken};environment=PROD_DEV;scontrols=true, environment: &lt;default&gt;, userName: achoudhary@rootstock.com.dev-qa-ff, password: [supplied], securityToken: [supplied]</div><div class='TestOutput inf'>Created Object ID log file.  Path: F:\Automation\ProvarRepository_Test_RSTK1\Test_RSTK_1\ANT\..\ANT\Results(4)\Artifacts\Devqaff-objectids.log</div><div class='TestOutput off'>Salesforce connection opened successfully.  Connection name: Devqaff, ResultName: Devqaff, resultScope: Test</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:28:58 (00:06.776)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:28:58 (00:06.778)</span></div>Start of Test Step On SF Global Search</div><div class='TestOutput inf'>Start of With Screen.  Connection Name: Devqaff, target: sf:ui:target?action=GlobalSearch</div><div class='TestOutput inf'>Added Chrome command line switch to bypass proxy for local addresses: --proxy-bypass-list=localhost,127.0.0.1,192.168.43.54</div><div class='TestOutput inf'>Added Desired Capability for chrome browser proxy: Null</div><div class='TestOutput inf'>Successfully opened Chrome WebDriver to https://login.salesforce.com/.</div><div class='TestOutput inf'>Opening Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Opening Home Page</div><div class='TestOutput inf'>Opening page.  URL: https://login.salesforce.com/?un=achoudhary%40rootstock.com.dev-qa-ff&pw={password}&startURL=%2Fhome%2Fhome.jsp%3Ftsid%3D02ud0000000AcI2</div><div class='TestOutput inf'>Start of waitForPageToLoad.  Timeout(ms): 90000</div><div class='TestOutput inf'>Reattempting of waitForPageToLoad.  Timeout(ms): 90000</div><div class='TestOutput inf'>End of waitForPageToLoad.  Duration(ms): 68</div><div class='TestOutput inf'>Browser window has been opened.  Name: main</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:29:25 (00:34.664)</span></div>Start of Test Step Set the Search Box field to {OrderNumber}</div><div class='TestOutput inf'>Start of Interact.  Connection: Devqaff, Locator: ui:locator?name=searchBox, before wait: default, after wait: default, auto retry: default</div><div class='TestOutput inf'>Locator: ui:locator?name=searchBox</div><div class='TestOutput inf'>Interaction: ui:interaction?name=set</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://rstk-dev-qa-ff.my.salesforce.com/home/home.jsp?tsid=02ud0000000AcI2</div><div class='TestOutput inf'>Doing before wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>Got webElement.  tagName: INPUT, id: phSearchInput, type: text, selector: null</div><div class='TestOutput inf'>Typing value.  tagName: INPUT, type: text, value: , blur: false, selector: null</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:29:26 (00:35.413)</span></div>Test Step successful.</div></div><div class='TestOutput inf'>All Sub-Test Steps were successful.</div><div class='TestOutput inf'>Closing Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Main window reselected.  Window: main</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://rstk-dev-qa-ff.my.salesforce.com/home/home.jsp?tsid=02ud0000000AcI2</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:29:28 (00:37.654)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:29:28 (00:37.655)</span></div>Start of Test Step On SF Global Search</div><div class='TestOutput inf'>Start of With Screen.  Connection Name: Devqaff, target: sf:ui:target?action=GlobalSearch</div><div class='TestOutput inf'>Opening Page context.  Name: screen, data: null, frame: null</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:29:29 (00:37.842)</span></div>Start of Test Step Click the Search Button button</div><div class='TestOutput inf'>Start of Interact.  Connection: Devqaff, Locator: ui:locator?name=searchButton, before wait: default, after wait: default, auto retry: default</div><div class='TestOutput inf'>Locator: ui:locator?name=searchButton</div><div class='TestOutput inf'>Interaction: ui:interaction?name=action</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://rstk-dev-qa-ff.my.salesforce.com/home/home.jsp?tsid=02ud0000000AcI2</div><div class='TestOutput inf'>Doing before wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>Clicking WebElement.  WebElement [tag: input, text: Search]</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:29:30 (00:38.888)</span></div>Test Step successful.</div></div><div class='TestOutput inf'>All Sub-Test Steps were successful.</div><div class='TestOutput inf'>Closing Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Main window reselected.  Window: main</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://rstk-dev-qa-ff.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=a5t&sen=a6X&sen=a5w&sen=a5x&sen=aBl&sen=a6b&sen=a7E&sen=a6d&sen=aH6&sen=aH7&sen=aD3&sen=01t&sen=a2e&sen=a2h&sen=a2g&sen=a2j&sen=a2k&sen=a2n&sen=a40&sen=a3O&sen=a3N&sen=a7U&sen=a3S&sen=a2q&sen=a48&sen=a2u&sen=02i&sen=aGu&sen=a4A&sen=a4D&sen=a4C&sen=001&sen=003&sen=005&sen=a3k&sen=a3j&sen=a4N&sen=a3m&sen=a54&sen=a4Y&sen=a8a&sen=00O&sen=a5D&sen=a4e&sen=aEZ&sen=a4i&sen=a4k&sen=a4n&sen=a5N&sen=a4r&sen=a66&sen=a65&sen=a5Y&sen=a5a&sen=a6B&sen=a6J&sen=500&sen=a6N&sen=a5q&sen=a6Q&sen=a5r&str=</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:29:35 (00:44.525)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:29:35 (00:44.526)</span></div>Start of Test Step On SF Sales Order Header Search screen</div><div class='TestOutput inf'>Start of With Screen.  Connection Name: Devqaff, target: sf:ui:target?object=rstk__sohdr__c&action=Search</div><div class='TestOutput inf'>Get the field translation for object : rstk__sohdr__c; field: Name; language: en_US ... 0%</div><div class='TestOutput off'>Get the field translation for object : rstk__sohdr__c; field: Name; language: en_US ... done</div><div class='TestOutput inf'>Opening Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Clicking WebElement.  WebElement [tag: a, text: Search All, href: javascript: void(0);]</div><div class='TestOutput inf'>Hover&gt;Clicking WebElement.  WebElement [tag: a, text: Sales Order Header&lt;br/&gt; (0), href: javascript: void(0);]</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:29:41 (00:50.597)</span></div>Start of Test Step With rstk__sohdr__c rows {RSTK__SOHDR__C_NAME = "{OrderNumber}"}</div><div style='float: right;' ><a target='_blank' href='../../../Artifacts/ScreenShot5'><img style='width: 150px; border: solid 2px grey;' src='../../../Artifacts/ScreenShot5'></img></a></div><div class='TestOutput inf'>Start of With Row.  Connection Name: Devqaff, target: sf:ui:locator:row?table=Search%2FsearchView%2FsearchTable</div><div class='TestOutput inf'>Resolved table xpath: //tr[contains(@class, 'dataRow')]</div><div class='TestOutput inf'>Start of Selenium Locator wait.  Locator: //div[@id='searchResultsHolderDiv']//*[(self::tr and contains(@class, 'dataRow')) or (self::th and contains(@class, 'noRowsHeader'))], frame: null, timeout(secs): 60</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://rstk-dev-qa-ff.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=a5t&sen=a6X&sen=a5w&sen=a5x&sen=aBl&sen=a6b&sen=a7E&sen=a6d&sen=aH6&sen=aH7&sen=aD3&sen=01t&sen=a2e&sen=a2h&sen=a2g&sen=a2j&sen=a2k&sen=a2n&sen=a40&sen=a3O&sen=a3N&sen=a7U&sen=a3S&sen=a2q&sen=a48&sen=a2u&sen=02i&sen=aGu&sen=a4A&sen=a4D&sen=a4C&sen=001&sen=003&sen=005&sen=a3k&sen=a3j&sen=a4N&sen=a3m&sen=a54&sen=a4Y&sen=a8a&sen=00O&sen=a5D&sen=a4e&sen=aEZ&sen=a4i&sen=a4k&sen=a4n&sen=a5N&sen=a4r&sen=a66&sen=a65&sen=a5Y&sen=a5a&sen=a6B&sen=a6J&sen=500&sen=a6N&sen=a5q&sen=a6Q&sen=a5r&str=#!/fen=a4k&initialViewMode=detail&searchAll=true&str=</div><div class='TestOutput inf'>End of Selenium Condition wait.</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://rstk-dev-qa-ff.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=a5t&sen=a6X&sen=a5w&sen=a5x&sen=aBl&sen=a6b&sen=a7E&sen=a6d&sen=aH6&sen=aH7&sen=aD3&sen=01t&sen=a2e&sen=a2h&sen=a2g&sen=a2j&sen=a2k&sen=a2n&sen=a40&sen=a3O&sen=a3N&sen=a7U&sen=a3S&sen=a2q&sen=a48&sen=a2u&sen=02i&sen=aGu&sen=a4A&sen=a4D&sen=a4C&sen=001&sen=003&sen=005&sen=a3k&sen=a3j&sen=a4N&sen=a3m&sen=a54&sen=a4Y&sen=a8a&sen=00O&sen=a5D&sen=a4e&sen=aEZ&sen=a4i&sen=a4k&sen=a4n&sen=a5N&sen=a4r&sen=a66&sen=a65&sen=a5Y&sen=a5a&sen=a6B&sen=a6J&sen=500&sen=a6N&sen=a5q&sen=a6Q&sen=a5r&str=#!/fen=a4k&initialViewMode=detail&searchAll=true&str=</div><div class='TestOutput sev'>No rows found in table</div><div class='TestOutput inf'>Start of waitForPageToLoad.  Timeout(ms): 90000</div><div class='TestOutput inf'>Reattempting of waitForPageToLoad.  Timeout(ms): 90000</div><div class='TestOutput inf'>End of waitForPageToLoad.  Duration(ms): 80</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:30:02 (01:10.744)</span></div>Test Step failed.</div></div><div class='TestOutput sev'>One or more Sub-Test Steps failed.</div><div class='TestOutput inf'>Closing Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Main window reselected.  Window: main</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://rstk-dev-qa-ff.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=a5t&sen=a6X&sen=a5w&sen=a5x&sen=aBl&sen=a6b&sen=a7E&sen=a6d&sen=aH6&sen=aH7&sen=aD3&sen=01t&sen=a2e&sen=a2h&sen=a2g&sen=a2j&sen=a2k&sen=a2n&sen=a40&sen=a3O&sen=a3N&sen=a7U&sen=a3S&sen=a2q&sen=a48&sen=a2u&sen=02i&sen=aGu&sen=a4A&sen=a4D&sen=a4C&sen=001&sen=003&sen=005&sen=a3k&sen=a3j&sen=a4N&sen=a3m&sen=a54&sen=a4Y&sen=a8a&sen=00O&sen=a5D&sen=a4e&sen=aEZ&sen=a4i&sen=a4k&sen=a4n&sen=a5N&sen=a4r&sen=a66&sen=a65&sen=a5Y&sen=a5a&sen=a6B&sen=a6J&sen=500&sen=a6N&sen=a5q&sen=a6Q&sen=a5r&str=#!/fen=a4k&initialViewMode=detail&searchAll=true&str=</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:30:04 (01:12.981)</span></div>Test Step failed.</div></div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:30:04 (01:12.986)</span></div>Test Case failed.</div></div><div class='TestOutput inf'>Closing Salesforce Connection.  Name: Devqaff</div><div class='TestOutput inf'>Closing Salesforce Connection because it is no longer being used.  Name: Devqaff</div><div class='TestOutput inf'>Closing Web Connection.</div><div class='TestOutput inf'>Closing Selenium driver</div><div class='TestOutput inf'>Shutting down Soap Connections.  logFilePath: Devqaff-objectids.log</div><div class='TestOutput off'>Salesforce Connection closed successfully.  Name: Devqaff</div>
+	</div></body>
+</html>

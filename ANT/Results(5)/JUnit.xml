@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test_RSTK_1/tests" tests="1" failures="1" skipped="0" hostname="LAPTOP-BJ5N0QR9" time="408.312" timestamp="Tue Feb 02 22:55:34 IST 2021">
+	<properties>
+		<property name="excludeCallableTestCases" value="false"/>
+		<property name="testEnvironment" value=""/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value=".."/>
+		<property name="salesforceMetadataCache" value="Reuse"/>
+		<property name="resultsPathDisposition" value="Increment"/>
+		<property name="testOutputLevel" value="INFO"/>
+		<property name="webBrowserType" value="Chrome"/>
+		<property name="resultsPath" value="../ANT/Results"/>
+		<property name="webBrowserConfiguration" value="1024x768"/>
+		<property name="projectCachePath" value="F:\Automation\ProvarRepository_Test_RSTK1\Test_RSTK_1\ANT\..\..\.provarCaches"/>
+	</properties>
+	<testcase classname="tests/Sales Order - CallableTesting\SO Flow.testcase" name="SO Flow.testcase" time="385.969">
+		<failure message="Execution failed"><![CDATA[Assertion Failed.null Contains 2]]></failure>
+	</testcase>
+</testsuite>

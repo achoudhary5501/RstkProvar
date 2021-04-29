@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test_RSTK_1/tests" tests="6" failures="5" skipped="0" hostname="LAPTOP-BJ5N0QR9" time="988.648" timestamp="Tue Feb 02 22:13:42 IST 2021">
+	<properties>
+		<property name="excludeCallableTestCases" value="false"/>
+		<property name="testEnvironment" value=""/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value=".."/>
+		<property name="salesforceMetadataCache" value="Reuse"/>
+		<property name="resultsPathDisposition" value="Increment"/>
+		<property name="testOutputLevel" value="INFO"/>
+		<property name="webBrowserType" value="Chrome"/>
+		<property name="resultsPath" value="../ANT/Results"/>
+		<property name="webBrowserConfiguration" value="1024x768"/>
+		<property name="projectCachePath" value="F:\Automation\ProvarRepository_Test_RSTK1\Test_RSTK_1\ANT\..\..\.provarCaches"/>
+	</properties>
+	<testcase classname="tests/Sales Order - CallableTesting\SO Flow.testcase" name="SO Flow.testcase" time="410.065">
+		<failure message="Execution failed"><![CDATA[Assertion Failed.null Contains 2]]></failure>
+	</testcase>
+	<testcase classname="tests/Sales Order - CallableTesting\SO Fulfillment.testcase" name="SO Fulfillment.testcase" time="76.077">
+		<failure message="Execution failed"><![CDATA[Error doing interaction.  Connection Name: Devqaff, cause: [NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//input[(@type = 'button' or @type = 'submit' or @type = 'file') and @value = 'Order Fulfillment'] | .//button[@value = 'Order Fulfillment' or normalize-space(.) = 'Order Fulfillment']"}
+  (Session info: chrome=88.0.4324.104)
+  (Driver info: chromedriver=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}),platform=Windows NT 10.0.19041 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 74 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-BJ5N0QR9', ip: '192.168.43.54', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53909}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}), userDataDir=F:\Automation\ProvarRepository_Test_RSTK1\.provarCaches\.chromeProfiles\profile0}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=88.0.4324.104, browserConnectionEnabled=false, proxy=Proxy(direct), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: a5d656a5047b32907698a3f0c12cec35
+*** Element info: {Using=xpath, value=.//input[(@type = 'button' or @type = 'submit' or @type = 'file') and @value = 'Order Fulfillment'] | .//button[@value = 'Order Fulfillment' or normalize-space(.) = 'Order Fulfillment']}]]]></failure>
+	</testcase>
+	<testcase classname="tests/Sales Order - CallableTesting\SO Header.testcase" name="SO Header.testcase" time="142.502">
+	</testcase>
+	<testcase classname="tests/Sales Order - CallableTesting\SO Invoice.testcase" name="SO Invoice.testcase" time="69.285">
+		<failure message="Execution failed"><![CDATA[The row locator did not match any rows.]]></failure>
+	</testcase>
+	<testcase classname="tests/Sales Order - CallableTesting\SO Line.testcase" name="SO Line.testcase" time="136.855">
+		<failure message="Execution failed"><![CDATA[Error doing interaction.  Connection Name: Devqaff, cause: [NoSuchElementException: No elements matched the field locator.  Field name: Product_Select
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-BJ5N0QR9', ip: '192.168.43.54', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: ProvarSeleniumDriver]]]></failure>
+	</testcase>
+	<testcase classname="tests/Sales Order - CallableTesting\Search a record.testcase" name="Search a record.testcase" time="72.986">
+		<failure message="Execution failed"><![CDATA[No rows found in table]]></failure>
+	</testcase>
+</testsuite>

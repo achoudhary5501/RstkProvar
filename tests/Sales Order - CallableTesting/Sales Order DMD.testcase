@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase registryId="6e50202a-2bee-4076-9c54-131e12367b03" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Devqaff (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">Devqaff</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Devqaff</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">Force_com</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument argId="f6660659-e4e1-41f9-942d-360e2c830538" id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Reuse</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="2" title="Set Values: SONumber">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">SONumber</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable">
+                  <path element="value"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="7" title="SOQL Query: SELECT Id FROM rstk__soorddmd__c WHERE Name LIKE '{SONumber}%'=&gt;rstkRows">
+      <arguments>
+        <argument id="soqlQuery">
+          <value class="compound">
+            <parts>
+              <value valueClass="string">SELECT Id FROM rstk__soorddmd__c WHERE Name LIKE '</value>
+              <variable>
+                <path element="SONumber"/>
+              </variable>
+              <value valueClass="string">%'</value>
+            </parts>
+          </value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">Devqaff</value>
+        </argument>
+        <argument id="resultListName">
+          <value class="value" valueClass="string">rstkRows</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexReadObject" name="ApexReadObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.ReadCustomObjectTestStepCommand" testItemId="12" title="Read Object: rstk__soorddmd__c = {rstkRows.Id}">
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">rstk__soorddmd__c</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">rstkRead</value>
+        </argument>
+        <argument id="objectId">
+          <value class="variable">
+            <path element="rstkRows"/>
+            <path element="Id"/>
+          </value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">Devqaff</value>
+        </argument>
+        <argument id="rstk__soorddmd_qtyreq__c">
+          <value class="value" valueClass="decimal">1.0</value>
+        </argument>
+        <argument id="rstk__soorddmd_qtyiss__c">
+          <value class="value" valueClass="decimal">0.0</value>
+        </argument>
+        <argument id="rstk__soorddmd_qtyoutstdg__c">
+          <value class="value" valueClass="decimal">1.0</value>
+        </argument>
+        <argument id="rstk__soorddmd_compicitem__c">
+          <value class="value" valueClass="string">a2f0W000002D5R4QAK</value>
+        </argument>
+        <argument id="rstk__soorddmd_soline__c">
+          <value class="value" valueClass="string">a4w0W0000020fQTQAY</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+      <resultAssertions>
+        <resultAssertion resultName="rstk__soorddmd_qtyreq__c" title="Check rstk__soorddmd_qtyreq__c">
+          <expected class="value" valueClass="string">2.000000</expected>
+        </resultAssertion>
+        <resultAssertion resultName="rstk__soorddmd_qtyiss__c" title="Check rstk__soorddmd_qtyiss__c">
+          <expected class="value" valueClass="string">2.000000</expected>
+        </resultAssertion>
+        <resultAssertion resultName="rstk__soorddmd_qtyoutstdg__c" title="Check rstk__soorddmd_qtyoutstdg__c">
+          <expected class="value" valueClass="string">0.000000</expected>
+        </resultAssertion>
+      </resultAssertions>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.ReadCustomObjectTestStepCommand.ConnectionName">Devqaff</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.ReadCustomObjectTestStepCommand.CustomObjectName">rstk__soorddmd__c</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=rstk__soorddmd__c&amp;field=rstk__soorddmd_qtyreq__c" name="rstk__soorddmd_qtyreq__c" title="Qty Required">
+          <summary>Total quantity required.</summary>
+        </apiParam>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=rstk__soorddmd__c&amp;field=rstk__soorddmd_qtyiss__c" name="rstk__soorddmd_qtyiss__c" title="Qty Issued">
+          <summary>This is the Quantity issued on this Sale Order Line</summary>
+        </apiParam>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=rstk__soorddmd__c&amp;field=rstk__soorddmd_qtyoutstdg__c" name="rstk__soorddmd_qtyoutstdg__c" title="Qty Remaining">
+          <summary>This is the Quantity still to be issued  on this Sale Order Line</summary>
+        </apiParam>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=rstk__soorddmd__c&amp;field=rstk__soorddmd_compicitem__c" name="rstk__soorddmd_compicitem__c" title="Component Item">
+          <summary>Item number of Kit Component</summary>
+        </apiParam>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=rstk__soorddmd__c&amp;field=rstk__soorddmd_soline__c" name="rstk__soorddmd_soline__c" title="Sales Order Line">
+          <summary>Sales Order Line for this demand.</summary>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="13" title="On SF Sales Order Demand View screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">Devqaff</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=rstk__soorddmd__c&amp;action=View"/>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Sales Order Demand View screen</value>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Always</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="sfUiTargetObjectId">
+          <value class="variable">
+            <path element="rstkRows"/>
+            <path element="Id"/>
+          </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="14">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" isTitleUpdated="true" name="UiAssert" testItemId="15" title="UI Assert-Verify SO Line on SODMD">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="rstk__soorddmd_soline__c">
+                      <fieldLocator uri="ui:locator?name=rstk__soorddmd_soline__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3Drstk__soorddmd__c%26field%3Drstk__soorddmd_soline__c"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo" normalize="true">
+                          <value class="compound">
+                            <parts>
+                              <variable>
+                                <path element="SONumber"/>
+                              </variable>
+                              <value valueClass="string">-001</value>
+                            </parts>
+                          </value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="beforeWait"/>
+                <argument id="autoRetry"/>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" isTitleUpdated="true" name="UiAssert" testItemId="16" title="UI Assert-Verify Component Item on SODMD">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="rstk__soorddmd_compicitem__c">
+                      <fieldLocator uri="ui:locator?name=rstk__soorddmd_compicitem__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3Drstk__soorddmd__c%26field%3Drstk__soorddmd_compicitem__c"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo" normalize="true">
+                          <value class="value" valueClass="string">5501-16 (Mfd)</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="beforeWait"/>
+                <argument id="autoRetry"/>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+  <params>
+    <param name="value" title="value">
+      <summary>The value to be set.</summary>
+      <type>
+        <textType/>
+      </type>
+    </param>
+    <param linkedToUrl="provar:hasvalue:f6660659-e4e1-41f9-942d-360e2c830538" name="reuseConnectionName" title="Override Connection">
+      <summary>The name of an already opened connect to re-use.</summary>
+      <type>
+        <connectionType>
+          <constraints>
+            <valueConstraint name="variableName">true</valueConstraint>
+            <valueConstraint name="requiredCapabilities">sfSoapConnect</valueConstraint>
+          </constraints>
+        </connectionType>
+      </type>
+    </param>
+  </params>
+  <args>
+    <argument id="reuseConnectionName">
+      <value class="variable">
+        <path element="reuseConnectionName"/>
+      </value>
+    </argument>
+    <argument id="value">
+      <value class="variable">
+        <path element="SONum"/>
+      </value>
+    </argument>
+  </args>
+</testCase>

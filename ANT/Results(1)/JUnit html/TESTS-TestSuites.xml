@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite failures="6" hostname="LAPTOP-BJ5N0QR9" id="0" name="Test_RSTK_1/tests" package="" skipped="0" tests="7" time="1902.358" timestamp="Sun Jan 31 18:00:08 IST 2021">
+	    <properties>
+		      <property name="excludeCallableTestCases" value="true" />
+
+		      <property name="testEnvironment" value="" />
+
+		      <property name="pluginOutputLevel" value="WARNING" />
+
+		      <property name="projectPath" value=".." />
+
+		      <property name="salesforceMetadataCache" value="Reuse" />
+
+		      <property name="resultsPathDisposition" value="Increment" />
+
+		      <property name="testOutputLevel" value="INFO" />
+
+		      <property name="webBrowserType" value="Chrome" />
+
+		      <property name="resultsPath" value="../ANT/Results" />
+
+		      <property name="webBrowserConfiguration" value="1024x768" />
+
+		      <property name="projectCachePath" value="F:\Automation\ProvarRepository_Test_RSTK1\Test_RSTK_1\ANT\..\..\.provarCaches" />
+
+	    </properties>
+
+	    <testcase classname="tests/Accounts-API.testcase" name="Accounts-API.testcase" time="0.062">
+	</testcase>
+
+	    <testcase classname="tests/Sales Order - CallableTesting\SO Flow.testcase" name="SO Flow.testcase" time="798.065">
+		      <failure message="Execution failed"><![CDATA[Error doing interaction.  Connection Name: Devqaff, cause: [NoSuchElementException: No elements matched the field locator.  Field name: salesOrderEntry1
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-BJ5N0QR9', ip: '192.168.43.54', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: driver.version: ProvarSeleniumDriver]]]></failure>
+
+	    </testcase>
+
+	    <testcase classname="tests/Sales Order VF.testcase" name="Sales Order VF.testcase" time="47.071">
+		      <failure message="Execution failed"><![CDATA[Error doing interaction.  Connection Name: Devqaff, cause: [NoSuchElementException: No elements matched the field locator.  Field name: salesOrderEntry1
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-BJ5N0QR9', ip: '192.168.43.54', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: driver.version: ProvarSeleniumDriver]]]></failure>
+
+	    </testcase>
+
+	    <testcase classname="tests/Sales Order.testcase" name="Sales Order.testcase" time="461.823">
+		      <failure message="Execution failed"><![CDATA[The control was not found.  Locator: By.xpath: //div[contains(@class,'bRelatedList')][1]//input[@name='new' or (contains(@name,'__new') and not(substring-after(@name,'__new')))]]]></failure>
+
+	    </testcase>
+
+	    <testcase classname="tests/SalesOrder_VF_API\SO Header qarsf.testcase" name="SO Header qarsf.testcase" time="554.329">
+		      <failure message="Execution failed"><![CDATA[Failed to create Object.  Error Messages: Cannot insert a Sales Order Header outside of the Rootstock Package.]]></failure>
+
+	    </testcase>
+
+	    <testcase classname="tests/SalesOrder_VF_API\SO Header-pde5.testcase" name="SO Header-pde5.testcase" time="1.327">
+		      <failure message="Execution failed"><![CDATA[Connection exception while opening Partner connection.  Connection name: Pde5, environment: <default>, authEndpoint: https://login.salesforce.com/services/Soap/u/50.0, userName: achoudhary@rootstock.com.pde5, password: [supplied], securityToken: [empty], messages: [LoginFault]]]></failure>
+
+	    </testcase>
+
+	    <testcase classname="tests/SalesOrder_VF_API\SO Header.testcase" name="SO Header.testcase" time="22.265">
+		      <failure message="Execution failed"><![CDATA[Failed to create Object.  Error Messages: Cannot insert a Sales Order Header outside of the Rootstock Package.]]></failure>
+
+	    </testcase>
+
+  </testsuite>
+</testsuites>

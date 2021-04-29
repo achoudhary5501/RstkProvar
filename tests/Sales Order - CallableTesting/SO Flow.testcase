@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="6">
+<testCase failureBehaviour="Continue" id="6">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="17" title="Connection">
@@ -56,31 +56,120 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="6" title="Sales Order Entry">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="186" title="Read On Hand Qty Before SO Shipment">
       <arguments>
         <argument id="description">
-          <value class="value" valueClass="string">Sales Order Entry</value>
+          <value class="value" valueClass="string">Read On Hand Qty Before SO Shipment</value>
         </argument>
       </arguments>
       <clauses>
-        <clause name="hidden" testItemId="7"/>
+        <clause name="hidden" testItemId="187">
+          <steps>
+            <caseCall testCaseId="7910dea4-5b6e-49d5-b77e-ac661332be17" testCasePath="tests/Sales Order - CallableTesting/Verify Inventory Quantity.testcase" testItemId="194">
+              <arguments>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">Devqaff</value>
+                </argument>
+              </arguments>
+              <outputArguments>
+                <outputArgument id="Qty">
+                  <name class="value" valueClass="string">Qty</name>
+                </outputArgument>
+              </outputArguments>
+            </caseCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="193" title="Set Values: QtyBefore">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">QtyBefore</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="variable">
+                          <path element="Qty"/>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
       </clauses>
     </apiCall>
-    <caseCall testCaseId="0984cba3-426d-4801-9d11-9d0c5411befe" testCasePath="tests/Sales Order - CallableTesting/SO Header.testcase" testItemId="8">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="180" title="Create a new Sales Order Header">
       <arguments>
-        <argument id="reuseConnectionName">
-          <value class="value" valueClass="string">Devqaff</value>
+        <argument id="description">
+          <value class="value" valueClass="string">Create a new Sales Order Header</value>
         </argument>
       </arguments>
-      <outputArguments>
-        <outputArgument id="Onum">
-          <name class="value" valueClass="string">Onum</name>
-        </outputArgument>
-        <outputArgument id="Ordnum">
-          <name class="value" valueClass="string">Ordnum</name>
-        </outputArgument>
-      </outputArguments>
-    </caseCall>
+      <clauses>
+        <clause name="hidden" testItemId="181">
+          <steps>
+            <caseCall testCaseId="0984cba3-426d-4801-9d11-9d0c5411befe" testCasePath="tests/Sales Order - CallableTesting/SO Header.testcase" testItemId="176">
+              <arguments>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">Devqaff</value>
+                </argument>
+              </arguments>
+              <outputArguments>
+                <outputArgument id="Onum">
+                  <name class="value" valueClass="string">Onum</name>
+                </outputArgument>
+                <outputArgument id="Ordnum">
+                  <name class="value" valueClass="string">Onum</name>
+                </outputArgument>
+              </outputArguments>
+            </caseCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="208" title="Set Values: QtyOrdered">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">QtyOrdered</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">2</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="182" title="Set Values: SONum">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">SONum</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable">
+                  <path element="Onum"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="12" title="Add Sales Order Line">
       <arguments>
         <argument id="description">
@@ -88,60 +177,295 @@
         </argument>
       </arguments>
       <clauses>
-        <clause name="hidden" testItemId="13"/>
+        <clause name="hidden" testItemId="13">
+          <steps>
+            <caseCall testCaseId="645e718d-d1ff-40cf-a157-4cedf2c6c0c7" testCasePath="tests/Sales Order - CallableTesting/SO Line.testcase" testItemId="66">
+              <arguments>
+                <argument id="ONumber">
+                  <value class="variable">
+                    <path element="Onum"/>
+                  </value>
+                </argument>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">Devqaff</value>
+                </argument>
+                <argument id="Onum">
+                  <value class="variable">
+                    <path element="Onum"/>
+                  </value>
+                </argument>
+              </arguments>
+              <outputArguments>
+                <outputArgument id="Row">
+                  <name class="value" valueClass="string">Row</name>
+                </outputArgument>
+              </outputArguments>
+            </caseCall>
+          </steps>
+        </clause>
       </clauses>
     </apiCall>
-    <caseCall testCaseId="645e718d-d1ff-40cf-a157-4cedf2c6c0c7" testCasePath="tests/Sales Order - CallableTesting/SO Line.testcase" testItemId="14">
-      <arguments>
-        <argument id="ONumber">
-          <value class="variable">
-            <path element="Onum"/>
-          </value>
-        </argument>
-        <argument id="reuseConnectionName">
-          <value class="value" valueClass="string">Devqaff</value>
-        </argument>
-      </arguments>
-      <outputArguments>
-        <outputArgument id="Row">
-          <name class="value" valueClass="string">Row</name>
-        </outputArgument>
-      </outputArguments>
-    </caseCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="15" title="Sales Order Fulfillment">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="15" title="Perform Sales Order Fulfillment">
       <arguments>
         <argument id="description">
-          <value class="value" valueClass="string">Sales Order Fulfillment</value>
+          <value class="value" valueClass="string">Perform Sales Order Fulfillment</value>
         </argument>
       </arguments>
       <clauses>
-        <clause name="hidden" testItemId="16"/>
+        <clause name="hidden" testItemId="16">
+          <steps>
+            <caseCall testCaseId="e030adcc-8761-45fa-b9e7-56172248d32f" testCasePath="tests/Sales Order - CallableTesting/SO Fulfillment.testcase" testItemId="21">
+              <arguments>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">Devqaff</value>
+                </argument>
+              </arguments>
+              <outputArguments>
+                <outputArgument id="Values_InvoiceNumber">
+                  <name class="value" valueClass="string">Values_InvoiceNumber</name>
+                </outputArgument>
+                <outputArgument id="Invoice">
+                  <name class="value" valueClass="string">Invoice</name>
+                </outputArgument>
+                <outputArgument id="Invoicenum">
+                  <name class="value" valueClass="string">Invoicenum</name>
+                </outputArgument>
+              </outputArguments>
+            </caseCall>
+          </steps>
+        </clause>
       </clauses>
     </apiCall>
-    <caseCall testCaseId="e030adcc-8761-45fa-b9e7-56172248d32f" testCasePath="tests/Sales Order - CallableTesting/SO Fulfillment.testcase" testItemId="21">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="62" title="Set Values: Invoice2">
       <arguments>
-        <argument id="reuseConnectionName">
-          <value class="value" valueClass="string">Devqaff</value>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Invoice2</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable">
+                  <path element="Invoice1"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Folder</value>
+              </namedValue>
+            </namedValues>
+          </value>
         </argument>
       </arguments>
-    </caseCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="22" title="Verify SO Invoice">
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="76" title="Verify SO Invoice">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Verify SO Invoice</value>
         </argument>
       </arguments>
       <clauses>
-        <clause name="hidden" testItemId="23"/>
+        <clause name="hidden" testItemId="77">
+          <steps>
+            <caseCall testCaseId="edeaaaed-79e1-4b83-ab55-0c831a17af81" testCasePath="tests/Sales Order - CallableTesting/SO Invoice.testcase" testItemId="82">
+              <arguments>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">Devqaff</value>
+                </argument>
+                <argument id="InvNumber_var">
+                  <value class="variable">
+                    <path element="InvNum"/>
+                  </value>
+                </argument>
+                <argument id="Invoice">
+                  <value class="variable">
+                    <path element="Invoice"/>
+                  </value>
+                </argument>
+                <argument id="Invoice3">
+                  <value class="variable">
+                    <path element="Invoice2"/>
+                  </value>
+                </argument>
+              </arguments>
+            </caseCall>
+          </steps>
+        </clause>
       </clauses>
     </apiCall>
-    <caseCall testCaseId="edeaaaed-79e1-4b83-ab55-0c831a17af81" testCasePath="tests/Sales Order - CallableTesting/SO Invoice.testcase" testItemId="24">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="60" title="Verify Requirements">
       <arguments>
-        <argument id="reuseConnectionName">
-          <value class="value" valueClass="string">Devqaff</value>
+        <argument id="description">
+          <value class="value" valueClass="string">Verify Requirements</value>
         </argument>
       </arguments>
-    </caseCall>
+      <clauses>
+        <clause name="hidden" testItemId="61">
+          <steps>
+            <caseCall testCaseId="1fec0be7-f9cc-4a27-9e17-2604b7a03404" testCasePath="tests/Sales Order - CallableTesting/Requirements.testcase" testItemId="190">
+              <arguments>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">Devqaff</value>
+                </argument>
+                <argument id="OrderNo">
+                  <value class="variable">
+                    <path element="SONum"/>
+                  </value>
+                </argument>
+              </arguments>
+            </caseCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="78" title="Verify Sales Order Demand">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Verify Sales Order Demand</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="79">
+          <steps>
+            <caseCall testCaseId="6e50202a-2bee-4076-9c54-131e12367b03" testCasePath="tests/Sales Order - CallableTesting/Sales Order DMD.testcase" testItemId="80">
+              <arguments>
+                <argument id="SONumber">
+                  <value class="variable">
+                    <path element="SONum"/>
+                  </value>
+                </argument>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">Devqaff</value>
+                </argument>
+                <argument id="value">
+                  <value class="variable">
+                    <path element="SONum"/>
+                  </value>
+                </argument>
+              </arguments>
+            </caseCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="204" title="Read On Hand Qty After SO Shipment">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Read On Hand Qty After SO Shipment</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="205">
+          <steps>
+            <caseCall testCaseId="7910dea4-5b6e-49d5-b77e-ac661332be17" testCasePath="tests/Sales Order - CallableTesting/Verify Inventory Quantity.testcase" testItemId="206">
+              <arguments>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">Devqaff</value>
+                </argument>
+              </arguments>
+              <outputArguments>
+                <outputArgument id="Qty">
+                  <name class="value" valueClass="string">Qty</name>
+                </outputArgument>
+              </outputArguments>
+            </caseCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="207" title="Set Values: QtyAfter">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">QtyAfter</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="variable">
+                          <path element="Qty"/>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="183" title="Assert: {QtyBefore - QtyOrdered} EqualTo {QtyAfter}">
+      <arguments>
+        <argument id="expectedValue">
+          <value class="sub">
+            <lhs class="variable">
+              <path element="QtyBefore"/>
+            </lhs>
+            <rhs class="variable">
+              <path element="QtyOrdered"/>
+            </rhs>
+          </value>
+        </argument>
+        <argument id="actualValue">
+          <value class="variable">
+            <path element="QtyAfter"/>
+          </value>
+        </argument>
+        <argument id="comparisonType">
+          <value class="value" valueClass="string">EqualTo</value>
+        </argument>
+        <argument id="caseSensitive">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="numeric">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="retainDecimals">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="nullGreater">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="matchMultiLine">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="matchDotAll">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="failureMessage">
+          <value class="value" valueClass="string">Quantity On hand Not Updated</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="209" title="Verify Cost Transactions details">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Verify Cost Transactions details</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="210">
+          <steps>
+            <caseCall testCaseId="45108229-2a83-4c37-b97c-4a5547403749" testCasePath="tests/Sales Order - CallableTesting/Cost Transactions.testcase" testItemId="211">
+              <arguments>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">Devqaff</value>
+                </argument>
+                <argument id="OrdNum">
+                  <value class="variable">
+                    <path element="SONum"/>
+                  </value>
+                </argument>
+                <argument id="QtyAfter">
+                  <value class="variable">
+                    <path element="QtyAfter"/>
+                  </value>
+                </argument>
+              </arguments>
+            </caseCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
   </steps>
   <params>
     <param name="Begin" title="Begin">

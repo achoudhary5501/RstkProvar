@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div style='float: right;'><img src='../../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> SO Invoice.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:24:51 (00:00.000)</span></div>Start of Test Case SO Invoice.testcase</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:24:51 (00:00.006)</span></div>Start of Test Step Salesforce Connect: Devqaff (Test)</div><div class='TestOutput inf'>Opening Salesforce connection  Connection name: Devqaff</div><div class='TestOutput inf'>Connection details.  Connection name: Devqaff, urlString: sf:user=achoudhary@rootstock.com.dev-qa-ff;password={password};securityToken={securityToken};environment=PROD_DEV;scontrols=true, environment: &lt;default&gt;, userName: achoudhary@rootstock.com.dev-qa-ff, password: [supplied], securityToken: [supplied]</div><div class='TestOutput inf'>Created Object ID log file.  Path: F:\Automation\ProvarRepository_Test_RSTK1\Test_RSTK_1\ANT\..\ANT\Results(4)\Artifacts\Devqaff-objectids.log</div><div class='TestOutput off'>Salesforce connection opened successfully.  Connection name: Devqaff, ResultName: Devqaff, resultScope: Test</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:24:56 (00:04.911)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:24:56 (00:04.913)</span></div>Start of Test Step Set Values: InvoiceNumber</div><div class='TestOutput inf'>Setting value InvoiceNumber, value: &lt;null&gt;</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:24:56 (00:04.923)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:24:56 (00:04.923)</span></div>Start of Test Step On SF rstk__SalesOrderWorkBench page with pageobject Rstk__ Sales Order Workbench</div><div class='TestOutput inf'>Start of With Screen.  Connection Name: Devqaff, target: sf:ui:target?pageObject=pageobjects.rstk__SalesOrderWorkbench&page=rstk__SalesOrderWorkBench</div><div class='TestOutput inf'>Added Chrome command line switch to bypass proxy for local addresses: --proxy-bypass-list=localhost,127.0.0.1,192.168.43.54</div><div class='TestOutput inf'>Added Desired Capability for chrome browser proxy: Null</div><div class='TestOutput inf'>Successfully opened Chrome WebDriver to https://login.salesforce.com/.</div><div class='TestOutput inf'>Opening Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Opening Salesforce Page.  Page Name: rstk__SalesOrderWorkBench, Url: /apex/rstk__SalesOrderWorkBench</div><div class='TestOutput inf'>Opening page.  URL: https://login.salesforce.com/?un=achoudhary%40rootstock.com.dev-qa-ff&pw={password}&startURL=%2Fhome%2Fhome.jsp%3Ftsid%3D02ud0000000AcI2</div><div class='TestOutput inf'>Start of waitForPageToLoad.  Timeout(ms): 90000</div><div class='TestOutput inf'>Reattempting of waitForPageToLoad.  Timeout(ms): 90000</div><div class='TestOutput inf'>End of waitForPageToLoad.  Duration(ms): 96</div><div class='TestOutput inf'>Qualified relative URL.  URL: https://rstk-dev-qa-ff.my.salesforce.com/apex/rstk__SalesOrderWorkBench</div><div class='TestOutput inf'>Opening page.  Requested URL: /apex/rstk__SalesOrderWorkBench, Absolute URL: https://rstk-dev-qa-ff.my.salesforce.com/apex/rstk__SalesOrderWorkBench</div><div class='TestOutput inf'>Browser window has been opened.  Name: main</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:25:33 (00:42.312)</span></div>Start of Test Step With Table rows {1}</div><div style='float: right;' ><a target='_blank' href='../../../Artifacts/ScreenShot3'><img style='width: 150px; border: solid 2px grey;' src='../../../Artifacts/ScreenShot3'></img></a></div><div class='TestOutput inf'>Start of With Row.  Connection Name: Devqaff, target: sf:ui:locator:row?table=table</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://rstk-dev-qa-ff--rstk.na52.visual.force.com/apex/SalesOrderWorkBench</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Doing Auto Retry wait.  Timeout(seconds): 20, Interval(milliseconds): 500</div><div class='TestOutput inf'>Applying row locator to rows.  Row Count: 0, Row Locator: {1}</div><div class='TestOutput sev'>The row locator did not match any rows.</div><div class='TestOutput inf'>Start of waitForPageToLoad.  Timeout(ms): 90000</div><div class='TestOutput inf'>Reattempting of waitForPageToLoad.  Timeout(ms): 90000</div><div class='TestOutput inf'>End of waitForPageToLoad.  Duration(ms): 67</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:25:58 (01:07.011)</span></div>Test Step failed.</div></div><div class='TestOutput sev'>One or more Sub-Test Steps failed.</div><div class='TestOutput inf'>Closing Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Main window reselected.  Window: main</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://rstk-dev-qa-ff--rstk.na52.visual.force.com/apex/SalesOrderWorkBench</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:26:00 (01:09.276)</span></div>Test Step failed.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step On SF rstk__Soinv page with pageobject Rstk__soinv SKIPPED</div></div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>22:26:00 (01:09.285)</span></div>Test Case failed.</div></div><div class='TestOutput inf'>Closing Salesforce Connection.  Name: Devqaff</div><div class='TestOutput inf'>Closing Salesforce Connection because it is no longer being used.  Name: Devqaff</div><div class='TestOutput inf'>Closing Web Connection.</div><div class='TestOutput inf'>Closing Selenium driver</div><div class='TestOutput inf'>Shutting down Soap Connections.  logFilePath: Devqaff-objectids.log</div><div class='TestOutput off'>Salesforce Connection closed successfully.  Name: Devqaff</div>
+	</div></body>
+</html>
